@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <main className={`flex min-h-screen flex-col ${darkMode ? 'bg-zinc-900 text-zinc-300' : 'bg-gradient-to-b from-zinc-300 to-indigo-400 text-zinc-700'}`}>
-      <nav className={`flex flex-row justify-between rounded-2xl border-2 border-zinc-100 p-3 mx-44 mt-4 ${darkMode ? '' : 'bg-opacity-85 bg-zinc-200'}`}>
+      <nav className={`flex flex-row justify-between rounded-2xl border-2 border-zinc-100 p-3 mx-44 mt-4 shadow-xl ${darkMode ? '' : 'bg-opacity-85 bg-zinc-200'}`}>
         <Image src={darkMode ? "/logo-white.png" : "/logo-no-background.svg"} width={145} height={145} />
           <a className="text-xl font-medium cursor-pointer">About</a>
           <a className="text-xl font-medium cursor-pointer">Projects</a>
@@ -32,10 +32,10 @@ export default function Home() {
           <p className="text-xl font-medium">Lorem ipsum dolor sit amet. Sed doloremque doloremque cum reiciendis deleniti qui quia minima ab veniam facilis. Aut earum consequuntur id accusamus dolor ut dolorum enim quo laboriosam unde ut officia laboriosam. Et consequatur quasi quo nisi nesciunt qui quia iste qui praesentium maiores id tempore quibusdam et neque eligendi ea numquam modi.</p>
         </div>
         <div className="flex flex-row gap-4 items-center">
-          <a className={`w-44 h-14 flex items-center justify-center p-5 rounded-lg text-base font-bold cursor-pointer ${darkMode ? 'text-zinc-300 bg-zinc-800 hover:bg-opacity-5 transition-colors' : 'text-zinc-700 bg-zinc-200 bg-opacity-40 hover:bg-opacity-85 transition-colors'}`}>
+          <a className={`w-44 h-14 flex items-center justify-center p-5 rounded-lg text-base font-bold shadow-xl cursor-pointer ${darkMode ? 'text-zinc-300 bg-zinc-800 hover:bg-opacity-5 transition-colors' : 'text-zinc-700 bg-zinc-200 bg-opacity-40 hover:bg-opacity-85 transition-colors'}`}>
             Open my CV
-          </a>
-          <a className={`w-44 h-14 flex items-center justify-center p-5 rounded-lg text-base font-bold cursor-pointer gap-2 ${darkMode ? 'text-zinc-300 bg-zinc-800 hover:bg-opacity-5 transition-colors' : 'text-zinc-700 bg-zinc-200 bg-opacity-40 hover:bg-opacity-85 transition-colors'}`}>
+          </a> 
+          <a className={`w-44 h-14 flex items-center justify-center p-5 rounded-lg text-base font-bold shadow-xl cursor-pointer gap-2 ${darkMode ? 'text-zinc-300 bg-zinc-800 hover:bg-opacity-5 transition-colors' : 'text-zinc-700 bg-zinc-200 bg-opacity-40 hover:bg-opacity-85 transition-colors'}`}>
             Contact me
             <Send />
           </a>
