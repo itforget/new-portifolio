@@ -44,7 +44,7 @@ export default function Home() {
       <div className="h-72 w-72"></div>
       <footer className="justify-end flex">
       <button onMouseEnter={() => {audioRef.current.play()}}>
-        <Image className="cursor-pointer hover:animate-bounce" src="/coin.gif" width={80} height={80}/>
+        <Image className="cursor-pointer hover:animate-bounce" src="/coin.gif" unoptimized width={80} height={80}/>
       </button>
       <audio ref={audioRef} src="/coin.wav"></audio>
       </footer>
