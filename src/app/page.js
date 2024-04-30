@@ -12,9 +12,9 @@ export default function Home() {
     <main className={`flex min-h-screen flex-col ${darkMode ? 'bg-zinc-900 text-zinc-300' : 'bg-gradient-to-b from-zinc-300 to-indigo-400 text-zinc-700'}`}>
       <nav className={`flex flex-row justify-between rounded-2xl border-2 border-zinc-100 p-3 mx-44 mt-4 shadow-xl ${darkMode ? '' : 'bg-opacity-85 bg-zinc-200'}`}>
         <Image src={darkMode ? "/logo-white.png" : "/logo-no-background.svg"} width={145} height={145} />
-          <a className="text-xl font-medium cursor-pointer">About</a>
-          <a className="text-xl font-medium cursor-pointer">Projects</a>
-          <a className="text-xl font-medium cursor-pointer">Contact</a>
+          <a className="text-xl font-medium cursor-pointer p-2 rounded-md hover:bg-zinc-500 transition-colors">About</a>
+          <a className="text-xl font-medium cursor-pointer p-2 rounded-md hover:bg-zinc-500 transition-colors">Projects</a>
+          <a className="text-xl font-medium cursor-pointer p-2 rounded-md hover:bg-zinc-500 transition-colors">Contact</a>
         <div className="flex flex-row items-center gap-4">
           <a className="cursor-pointer"><Instagram /></a>
           <a className="cursor-pointer"><Github /></a>
