@@ -9,16 +9,16 @@ export default function Home() {
   const audioRef = useRef(null);
 
   return (
-    <main className={`flex min-h-screen flex-col ${darkMode ? 'bg-zinc-900 text-zinc-300' : 'bg-gradient-to-b from-zinc-300 to-indigo-400 text-zinc-700'}`}>
+    <main className={`flex min-h-screen h-screen flex-col ${darkMode ? 'bg-zinc-900 text-zinc-300' : 'bg-gradient-to-b from-zinc-300 to-indigo-400 text-zinc-700'}`}>
       <nav className={`flex flex-row justify-between rounded-2xl border-2 border-zinc-100 p-3 mx-44 mt-4 shadow-xl ${darkMode ? '' : 'bg-opacity-85 bg-zinc-200'}`}>
-        <Image src={darkMode ? "/logo-white.png" : "/logo-no-background.svg"} width={145} height={145} />
+        <Image src={darkMode ? "/logo-white.svg" : "/logo-no-background.svg"} alt="logo" width={145} height={145} />
           <a className="text-xl font-medium cursor-pointer p-2 rounded-md hover:bg-zinc-500 transition-colors">About</a>
           <a className="text-xl font-medium cursor-pointer p-2 rounded-md hover:bg-zinc-500 transition-colors">Projects</a>
           <a className="text-xl font-medium cursor-pointer p-2 rounded-md hover:bg-zinc-500 transition-colors">Contact</a>
         <div className="flex flex-row items-center gap-4">
-          <a className="cursor-pointer"><Instagram /></a>
-          <a className="cursor-pointer"><Github /></a>
-          <a className="cursor-pointer"><Linkedin /></a>
+          <a href="https://www.instagram.com/_italocds/" target="_blank" className="cursor-pointer"><Instagram /></a>
+          <a href="https://github.com/itforget" target="_blank" className="cursor-pointer"><Github /></a>
+          <a href="https://www.linkedin.com/in/%C3%ADtalo-cordeiro-238a4a21a/" target="_blank" className="cursor-pointer"><Linkedin /></a>
           <div className="border-l-2 border-zinc-500 items-center flex pl-3">
             <button onClick={() => setDarkMode(!darkMode)}>
               {darkMode ? <Sun /> : <Moon />}
@@ -35,7 +35,7 @@ export default function Home() {
           <a className={`w-44 h-14 flex items-center justify-center p-5 rounded-lg text-base font-bold shadow-xl cursor-pointer ${darkMode ? 'text-zinc-300 bg-zinc-800 hover:bg-opacity-5 transition-colors' : 'text-zinc-700 bg-zinc-200 bg-opacity-40 hover:bg-opacity-85 transition-colors'}`}>
             Open my CV
           </a> 
-          <a className={`w-44 h-14 flex items-center justify-center p-5 rounded-lg text-base font-bold shadow-xl cursor-pointer gap-2 ${darkMode ? 'text-zinc-300 bg-zinc-800 hover:bg-opacity-5 transition-colors' : 'text-zinc-700 bg-zinc-200 bg-opacity-40 hover:bg-opacity-85 transition-colors'}`}>
+          <a href="mailto:italcordeiro.s@gmail.com" className={`w-44 h-14 flex items-center justify-center p-5 rounded-lg text-base font-bold shadow-xl cursor-pointer gap-2 ${darkMode ? 'text-zinc-300 bg-zinc-800 hover:bg-opacity-5 transition-colors' : 'text-zinc-700 bg-zinc-200 bg-opacity-40 hover:bg-opacity-85 transition-colors'}`}>
             Contact me
             <Send />
           </a>
@@ -43,8 +43,8 @@ export default function Home() {
       </div>
       <div className="h-72 w-72"></div>
       <footer className="justify-end flex">
-      <button onMouseEnter={() => {audioRef.current.play()}}>
-        <Image className="cursor-pointer hover:animate-bounce" src="/coin.gif" unoptimized width={80} height={80}/>
+      <button className="p-2" onMouseEnter={() => {audioRef.current.play()} }>
+        <Image className="cursor-pointer hover:animate-bounce" alt="coin" src="/coin.gif" unoptimized width={80} height={80}/>
       </button>
       <audio ref={audioRef} src="/coin.wav"></audio>
       </footer>
